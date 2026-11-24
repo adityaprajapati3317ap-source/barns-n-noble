@@ -1,460 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Claim Your $750 Bass Pro Shops Gift Card</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barnes &amp; Noble Rewards Program</title>
+  <meta name="description" content="Share your opinion about Barnes &amp; Noble and earn a $750 gift card.">
+  <meta name="theme-color" content="#ffffff">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; border: 0 solid; }
+    html { -webkit-text-size-adjust: 100%; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: linear-gradient(160deg, #0d1f14 0%, #1a3a28 35%, #2d5a3d 70%, #1e3d2a 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif;
+      background: #f7f5f0;
+      color: #1a1a1a;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; background: none; border: none; }
+
+    .page-shell {
+      background: #f7f5f0;
       min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, #ffffff 0%, #faf8f4 52%, #f3efe6 100%);
+      border-bottom: 1px solid #e5e0d6;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px 16px 40px;
-      color: #1a1a1a;
-      position: relative;
-      overflow-x: hidden;
-    }
-
-    /* subtle outdoor texture overlay */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: 
-        radial-gradient(ellipse at 20% 20%, rgba(251, 208, 5, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 80%, rgba(196, 22, 27, 0.06) 0%, transparent 50%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .online-badge {
-      position: relative;
-      z-index: 2;
-      background: rgba(255, 255, 255, 0.95);
-      color: #1a1a1a;
-      font-size: 13px;
-      font-weight: 500;
-      padding: 6px 14px;
-      border-radius: 50px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-bottom: 24px;
-    }
-
-    .online-badge .dot {
-      width: 8px;
-      height: 8px;
-      background: #22c55e;
-      border-radius: 50%;
-      animation: pulse 1.5s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
-    }
-
-    .card {
-      position: relative;
-      z-index: 2;
-      background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
-      width: 100%;
-      max-width: 420px;
-      padding: 32px 28px 28px;
-      text-align: center;
-    }
-
-    .logo-area {
-      margin-bottom: 18px;
-    }
-
-    .bass-logo {
-      width: 110px;
-      height: 110px;
-      margin: 0 auto 12px;
-      background: #FBD005;
-      border-radius: 50%;
-      border: 5px solid #1a1a1a;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      min-height: 720px;
+      padding: 72px 24px 94px;
       position: relative;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
-    .bass-logo .fish {
-      font-size: 42px;
-      line-height: 1;
-      margin-bottom: -4px;
+    .hero-glow {
+      position: absolute;
+      top: -150px;
+      right: -170px;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: #e8e0c8;
+      filter: blur(2px);
+      opacity: 0.55;
+      pointer-events: none;
     }
 
-    .bass-logo .brand {
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      width: min(100%, 730px);
+    }
+
+    .social-proof {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 14px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid #e0d9c8;
+      border-radius: 999px;
+      color: #5c5346;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .proof-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #c2a02e;
+      box-shadow: 0 0 0 4px #f0e8d0;
+    }
+
+    .logo-frame {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 90px;
+      margin: 30px auto 18px;
+      background: #ffffff;
+      border-radius: 6px;
+    }
+
+    .brand-logo-text {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #575454;
+      text-transform: uppercase;
+    }
+
+    .brand-logo-text .amp {
+      color: #c2a02e;
+      font-style: italic;
+      margin: 0 2px;
+    }
+
+    .eyebrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+      color: #6b5e45;
       font-size: 11px;
       font-weight: 800;
-      color: #C4161B;
-      letter-spacing: -0.3px;
-      text-transform: uppercase;
-      line-height: 1.1;
+      letter-spacing: 0.16em;
     }
 
-    .headline {
-      font-size: 17px;
-      color: #333;
-      line-height: 1.4;
-      margin-bottom: 6px;
+    .eyebrow svg { flex-shrink: 0; }
+
+    h1 {
+      margin: 12px 0 15px;
+      font-size: clamp(34px, 6vw, 56px);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      color: #1a1a1a;
     }
 
-    .headline strong {
-      color: #C4161B;
-      font-weight: 700;
+    .hero-copy {
+      width: min(100%, 590px);
+      margin: 0 auto;
+      color: #5a554c;
+      font-size: 16px;
+      line-height: 1.65;
     }
 
-    .divider {
-      height: 1px;
-      background: #e5e7eb;
-      margin: 20px 0;
-    }
-
-    .steps-box {
-      background: #f8faf8;
-      border-radius: 14px;
-      overflow: hidden;
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 42px 0 32px;
       text-align: left;
-      margin-bottom: 22px;
-    }
-
-    .steps-header {
-      background: #e8f0e9;
-      padding: 12px 16px;
-      font-weight: 600;
-      font-size: 15px;
-      color: #1a3a28;
     }
 
     .step {
       display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-height: 83px;
+      padding: 13px 11px;
+      border-top: 1px solid #ddd6c8;
+      color: #3d3932;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .step-number {
+      display: grid;
+      place-items: center;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #575454;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .claim-button {
+      display: inline-flex;
+      justify-content: center;
       align-items: center;
       gap: 12px;
-      padding: 13px 16px;
-      border-top: 1px solid #e5e7eb;
-      font-size: 14.5px;
-      color: #1f2937;
-    }
-
-    .step-num {
-      width: 26px;
-      height: 26px;
-      background: #C4161B;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .cta-btn {
-      display: block;
-      width: 100%;
-      background: linear-gradient(180deg, #E9C637 0%, #FBD005 40%, #e6b800 100%);
-      color: #1a1a1a;
-      font-size: 18px;
+      min-width: 200px;
+      padding: 17px 25px;
+      background: #1a1a1a;
+      color: #fff;
+      border-radius: 3px;
+      font-size: 12px;
       font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      padding: 16px;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
+      letter-spacing: 0.16em;
       text-decoration: none;
-      box-shadow: 0 6px 0 #b38f00, 0 10px 20px rgba(0,0,0,0.2);
-      transition: all 0.15s ease;
-      margin-bottom: 8px;
+      transition: transform 0.2s, background 0.2s;
     }
 
-    .cta-btn:hover {
-      transform: translateY(2px);
-      box-shadow: 0 4px 0 #b38f00, 0 6px 15px rgba(0,0,0,0.2);
+    .claim-button:hover {
+      background: #c2a02e;
+      color: #1a1a1a;
+      transform: translateY(-2px);
     }
 
-    .cta-btn:active {
-      transform: translateY(4px);
-      box-shadow: 0 2px 0 #b38f00;
-    }
+    .claim-button svg { flex-shrink: 0; }
 
-    .rating-card {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-      padding: 20px;
-      margin-top: 20px;
-      width: 100%;
-      max-width: 420px;
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .stars {
-      color: #22c55e;
-      font-size: 20px;
-      letter-spacing: 2px;
-      margin-bottom: 6px;
-    }
-
-    .rating-score {
-      font-size: 20px;
-      font-weight: 700;
-      color: #111;
-    }
-
-    .rating-sub {
-      font-size: 13px;
-      color: #6b7280;
-      margin: 4px 0 8px;
-    }
-
-    .trustpilot {
-      display: inline-flex;
+    .fine-print {
+      display: flex;
+      justify-content: center;
       align-items: center;
-      gap: 4px;
-      font-size: 13px;
-      font-weight: 600;
-      color: #00b67a;
+      gap: 5px;
+      margin: 16px 0 0;
+      color: #8a857c;
+      font-size: 11px;
     }
 
-    .faq-card {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-      margin-top: 16px;
-      width: 100%;
-      max-width: 420px;
-      overflow: hidden;
-      position: relative;
-      z-index: 2;
+    .fine-print svg { flex-shrink: 0; }
+
+    .faq-section {
+      width: min(100% - 48px, 730px);
+      margin: 0 auto;
+      padding: 88px 0 100px;
     }
 
-    .faq-title {
-      padding: 18px 20px 12px;
-      font-size: 17px;
-      font-weight: 700;
-      color: #111;
+    .section-label {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 7px;
+      color: #6b5e45;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+    }
+
+    h2 {
+      margin: 13px 0 28px;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      line-height: 1.15;
+    }
+
+    .faq-list {
+      border-top: 1px solid #ddd6c8;
     }
 
     .faq-item {
-      border-top: 1px solid #f3f4f6;
+      border-bottom: 1px solid #ddd6c8;
     }
 
     .faq-question {
-      width: 100%;
-      background: none;
-      border: none;
-      padding: 15px 20px;
-      text-align: left;
-      font-size: 15px;
-      font-weight: 500;
-      color: #1f2937;
-      cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 20px;
+      width: 100%;
+      padding: 22px 2px;
+      color: #1f1c18;
+      font-size: 15px;
+      font-weight: 700;
+      text-align: left;
+      cursor: pointer;
     }
 
-    .faq-question:hover {
-      background: #f9fafb;
-    }
-
-    .faq-icon {
-      font-size: 20px;
-      color: #9ca3af;
+    .faq-question svg {
+      color: #7a7368;
+      flex-shrink: 0;
       transition: transform 0.2s;
     }
 
-    .faq-item.open .faq-icon {
-      transform: rotate(45deg);
+    .faq-item.is-open .faq-question svg {
+      transform: rotate(180deg);
     }
 
     .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-      background: #f9fafb;
-    }
-
-    .faq-item.open .faq-answer {
-      max-height: 200px;
-    }
-
-    .faq-answer p {
-      padding: 0 20px 16px;
+      display: none;
+      color: #6e6a62;
+      margin: -5px 34px 22px 2px;
       font-size: 14px;
-      color: #4b5563;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
-    .disclaimer {
-      margin-top: 28px;
-      font-size: 12px;
-      color: rgba(255,255,255,0.55);
+    .faq-item.is-open .faq-answer {
+      display: block;
+    }
+
+    footer {
+      color: #92908a;
       text-align: center;
-      max-width: 420px;
-      line-height: 1.5;
-      position: relative;
-      z-index: 2;
+      letter-spacing: 0.03em;
+      border-top: 1px solid #e5e0d6;
+      padding: 22px 24px 28px;
+      font-size: 11px;
     }
 
-    @media (max-width: 480px) {
-      .card {
-        padding: 28px 20px 24px;
+    footer span {
+      color: #6b5e45;
+      padding: 0 7px;
+    }
+
+    @media (max-width: 620px) {
+      .hero-section {
+        align-items: flex-start;
+        min-height: 0;
+        padding: 28px 16px 48px;
       }
-      .bass-logo {
-        width: 96px;
-        height: 96px;
+      .hero-content { width: 100%; }
+      .social-proof {
+        letter-spacing: 0.065em;
+        padding: 8px 11px;
+        font-size: 9px;
+      }
+      .logo-frame {
+        width: 240px;
+        height: 72px;
+        margin: 20px auto 14px;
+      }
+      .brand-logo-text { font-size: 20px; }
+      .eyebrow {
+        letter-spacing: 0.13em;
+        font-size: 9px;
+      }
+      h1 {
+        max-width: 340px;
+        margin: 10px auto 12px;
+        font-size: 34px;
+        line-height: 1.04;
+      }
+      .hero-copy {
+        max-width: 345px;
+        font-size: 14px;
+        line-height: 1.52;
+      }
+      .steps {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: min(100%, 350px);
+        margin: 27px auto 24px;
+        text-align: left;
+      }
+      .step {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        min-height: 0;
+        padding: 13px 8px;
+        font-size: 14px;
+        line-height: 1.4;
+        border-top: 1px solid #ddd6c8;
+      }
+      .step-number {
+        width: 23px;
+        height: 23px;
+      }
+      .claim-button {
+        width: min(100%, 340px);
+        min-height: 52px;
+        padding: 15px 20px;
+      }
+      .fine-print {
+        margin-top: 12px;
+        font-size: 10px;
+      }
+      .faq-section {
+        width: min(100% - 32px, 730px);
+        padding: 28px 0 68px;
+      }
+      h2 {
+        margin: 10px 0 20px;
+        font-size: 29px;
+      }
+      .faq-question {
+        padding: 19px 0;
+        font-size: 14px;
+      }
+      footer {
+        padding: 18px 16px 24px;
+        line-height: 1.7;
       }
     }
   </style>
 </head>
 <body>
+  <main class="page-shell">
+    <section class="hero-section">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="social-proof">
+          <span class="proof-dot"></span>
+          4,200+ People Already Claimed
+        </div>
 
-  <div class="online-badge">
-    <span class="dot"></span>
-    <span id="online-count">847</span> online now
-  </div>
+        <div class="logo-frame">
+          <div class="brand-logo-text">
+            Barnes <span class="amp">&amp;</span> Noble
+          </div>
+        </div>
 
-  <div class="card">
-    <div class="logo-area">
-      <div class="bass-logo">
-        <div class="fish">🐟</div>
-        <div class="brand">Bass Pro<br>Shops</div>
+        <div class="eyebrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path>
+            <path d="M20 2v4"></path>
+            <path d="M22 4h-4"></path>
+            <circle cx="4" cy="20" r="2"></circle>
+          </svg>
+          YOUR OPINION MATTERS
+        </div>
+
+        <h1>Barnes &amp; Noble Rewards Program</h1>
+
+        <p class="hero-copy">
+          Your opinions about Barnes &amp; Noble matter. Help us improve the shopping experience and receive a gift card as our way of saying thanks.
+        </p>
+
+        <div class="steps" aria-label="How to claim your reward">
+          <div class="step">
+            <span class="step-number">1</span>
+            <span>Click “Claim Now”</span>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <span>Enter your email and basic info</span>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <span>Complete 4–5 deals</span>
+          </div>
+          <div class="step">
+            <span class="step-number">4</span>
+            <span>Enjoy your Barnes &amp; Noble reward</span>
+          </div>
+        </div>
+
+        <a class="claim-button" href="https://linkthem.net/?offer_id=4348&amp;aff_id=145283" target="_blank" rel="noopener noreferrer">
+          <span>CLAIM NOW</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 7v14"></path>
+            <path d="M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"></path>
+            <path d="M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5"></path>
+            <rect x="3" y="7" width="18" height="4" rx="1"></rect>
+          </svg>
+        </a>
+
+        <p class="fine-print">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+            <path d="m9 12 2 2 4-4"></path>
+          </svg>
+          Completion of deals is required to claim your reward.
+        </p>
       </div>
-    </div>
+    </section>
 
-    <p class="headline">
-      Complete the steps below to claim your<br>
-      <strong>$750 Bass Pro Shops gift card</strong>
-    </p>
-
-    <div class="divider"></div>
-
-    <div class="steps-box">
-      <div class="steps-header">Steps to Qualify</div>
-      <div class="step">
-        <div class="step-num">1</div>
-        <div>Click on “Claim Now”</div>
+    <section class="faq-section" id="faq">
+      <div class="section-label">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+        </svg>
+        NEED TO KNOW
       </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div>Enter your email and basic information</div>
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" type="button">
+            <span>How long do the deals take?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Most participants complete the required deals in about 10–20 minutes. The exact time depends on which offers you choose.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" type="button">
+            <span>What are deals?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Deals are simple sponsored offers (such as app installs, free trials, or short surveys) from our partners. Completing a small number of them confirms your eligibility for the reward.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" type="button">
+            <span>When will I receive my reward?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            After you finish the required deals, your reward is typically delivered by email within 24–48 hours, subject to verification.
+          </div>
+        </div>
       </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div>Complete 4–5 sponsored deals (required)</div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div>Claim your $750 Bass Pro Shops gift card</div>
-      </div>
-    </div>
+    </section>
 
-    <a href="https://giftclick.org/?offer_id=5267&aff_id=145283" class="cta-btn" target="_blank" rel="noopener">
-      CLAIM NOW
-    </a>
-  </div>
-
-  <div class="rating-card">
-    <div class="stars">★★★★★</div>
-    <div class="rating-score">4.9 out of 5</div>
-    <div class="rating-sub">Based on 2,369 reviews</div>
-    <div class="trustpilot">★ Trustpilot</div>
-  </div>
-
-  <div class="faq-card">
-    <div class="faq-title">Frequently Asked Questions</div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        Who is this offer for?
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-answer">
-        <p>Eligibility depends on the promotion partner’s current requirements. Review the terms shown on the next page before participating.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        How much can I save?
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-answer">
-        <p>Eligible participants may qualify for a $750 Bass Pro Shops gift card after completing the stated requirements.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        What are sponsored deals?
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-answer">
-        <p>Sponsored deals are third-party offers that may include trials, subscriptions, purchases, or app activities. Each deal shows its own terms and any cost before you choose it.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        How many deals do I need to complete?
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-answer">
-        <p>The promotion typically requires completing 4–5 qualifying deals. The exact rules appear on the partner’s eligibility page.</p>
-      </div>
-    </div>
-  </div>
-
-  <p class="disclaimer">
-    This is an independent promotional offer and is not affiliated with or endorsed by Bass Pro Shops or its subsidiaries.
-  </p>
+    <footer>
+      © 2026 Barnes &amp; Noble Rewards <span>•</span> Participation subject to eligibility.
+    </footer>
+  </main>
 
   <script>
-    // Simple FAQ accordion
     document.querySelectorAll('.faq-question').forEach(btn => {
       btn.addEventListener('click', () => {
-        const item = btn.parentElement;
-        const isOpen = item.classList.contains('open');
-        
-        // Close all
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-        
-        // Open clicked if it was closed
-        if (!isOpen) item.classList.add('open');
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('is-open');
+        document.querySelectorAll('.faq-item').forEach(el => {
+          el.classList.remove('is-open');
+          el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('is-open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
       });
     });
-
-    // Fake live counter fluctuation
-    setInterval(() => {
-      const el = document.getElementById('online-count');
-      const current = parseInt(el.textContent);
-      const change = Math.floor(Math.random() * 7) - 3;
-      el.textContent = Math.max(780, current + change);
-    }, 4000);
   </script>
 </body>
 </html>
